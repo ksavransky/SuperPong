@@ -90,10 +90,12 @@ function draw() {
       paddleX -= 7;
     }
 
-    if(ballX > compPaddleX && compPaddleX < canvas.width-paddleWidth){
-      compPaddleX += 2;
-    } else if (ballX-paddleWidth < compPaddleX){
-      compPaddleX -= 2;
+    if(ballY < canvas.height/2 ){
+      if(ballX > compPaddleX + paddleWidth/2 && compPaddleX < canvas.width-paddleWidth){
+        compPaddleX += 2;
+      } else if (ballX-paddleWidth < compPaddleX && compPaddleX > 0){
+        compPaddleX -= 2;
+      }
     }
 }
 
