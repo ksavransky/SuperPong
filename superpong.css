@@ -1,0 +1,21 @@
+* {
+  padding: 0;
+  margin: 0;
+  background-color: green;
+  /*background-image: url("http://res.cloudinary.com/ksavransky/image/upload/v1473812091/pong10_iiz8pn.jpg");*/
+}
+
+canvas {
+  background: black;
+
+   margin-top: 30px;
+   padding-left: 0;
+   padding-right: 0;
+   margin-left: auto;
+   margin-right: auto;
+   display: block;
+}
+
+
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
