@@ -1,6 +1,10 @@
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
 
+var game;
+var gamePaused = false;
+
+
 var humanScore = 0;
 var compScore = 0;
 
@@ -138,12 +142,15 @@ function draw() {
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
 
+
 function keyDownHandler(e) {
     if(e.keyCode == 39) {
         rightPressed = true;
     }
     else if(e.keyCode == 37) {
         leftPressed = true;
+    } else if (e.keyCode == 80) {
+      pauseGame();
     }
 }
 
@@ -156,15 +163,30 @@ function keyUpHandler(e) {
     }
 }
 
+function pauseGame() {
+  if (!gamePaused) {
+    game = clearTimeout(game);
+    canvas.style.background = "grey";
+    document.getElementById("pause-label").style.visibility = "visible";
+
+    gamePaused = true;
+  } else if (gamePaused) {
+    game = setInterval(draw, 10);
+    canvas.style.background = "black";
+    document.getElementById("pause-label").style.visibility = "hidden";
+    gamePaused = false;
+  }
+}
+
 function startNewGame(){
   let ng = document.getElementById("new-game");
   ng.style.pointerEvents = "none";
   ng.style.visibility = "hidden";
   ballX = canvas.width/2;
   ballY = canvas.height/2;
-  ballDX = 1;
-  ballDY = 3;
+  ballDX = 2;
+  ballDY = -3;
   humanScore = 0;
   compScore = 0;
-  setInterval(draw, 10);
+  game = setInterval(draw, 10);
 }
