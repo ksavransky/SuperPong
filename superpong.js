@@ -19,6 +19,18 @@ var compPaddleX = (canvas.width-paddleWidth)/2;
 var rightPressed = false;
 var leftPressed = false;
 
+function easy(){
+  console.log("easy");
+}
+
+function normal(){
+  console.log("normal");
+}
+
+function hard(){
+  console.log("hard");
+}
+
 function drawPaddle() {
     ctx.beginPath();
     ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
@@ -56,13 +68,20 @@ function draw() {
 
     if (ballY + ballDY > canvas.height-ballRadius) {
       if(ballX > paddleX && ballX < paddleX + paddleWidth) {
+        let paddleMovement = 0;
+        if(rightPressed){
+          paddleMovement = 2;
+        } else if(leftPressed){
+          paddleMovement = -2;
+        }
         ballDY = -ballDY;
+        ballDX = ballDX + paddleMovement;
         }
         else {
         compScore++;
         ballX = canvas.width/2;
         ballY = canvas.height/2;
-        ballDX = -ballDX;
+        ballDX = 2;
         ballDY = 3;
       }
     }
@@ -75,7 +94,7 @@ function draw() {
         humanScore++;
         ballX = canvas.width/2;
         ballY = canvas.height/2;
-        ballDX = -ballDX;
+        ballDX = -2;
         ballDY = 3;
       }
     }
@@ -90,10 +109,10 @@ function draw() {
       paddleX -= 7;
     }
 
-    if(ballY < canvas.height/2 ){
-      if(ballX > compPaddleX + paddleWidth/2 && compPaddleX < canvas.width-paddleWidth){
+    if(ballY < canvas.height*0.7 && ballDY < 0 ){
+      if(ballX + 20 > compPaddleX + paddleWidth/2 && compPaddleX < canvas.width-paddleWidth){
         compPaddleX += 2;
-      } else if (ballX-paddleWidth < compPaddleX && compPaddleX > 0){
+      } else if (ballX-paddleWidth - 20 < compPaddleX && compPaddleX > 0){
         compPaddleX -= 2;
       }
     }

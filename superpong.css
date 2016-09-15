@@ -5,17 +5,52 @@
   /*background-image: url("http://res.cloudinary.com/ksavransky/image/upload/v1473812091/pong10_iiz8pn.jpg");*/
 }
 
-canvas {
-  background: black;
-
-   margin-top: 30px;
-   padding-left: 0;
-   padding-right: 0;
-   margin-left: auto;
-   margin-right: auto;
-   display: block;
+body {
+  display: flex;
+  justify-content: center;
 }
 
+canvas {
+  display: flex;
+  background: black;
+  margin-top: 30px;
+  padding-left: 0;
+  padding-right: 0;
+}
 
-var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
+#control-box{
+  display: flex;
+  height: 300px;
+  width: 200px;
+  margin-right: 30px;
+  margin-top: 30px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.button {
+  display: flex;
+  height: 30px;
+  width: 90px;
+  border-radius: 5px;
+  border: 1px solid black;
+  color: blue;
+  background: white;
+  cursor: pointer;
+  padding: 2px;
+  margin: 5px;
+}
+
+#easy{
+
+}
+
+#score-box{
+  display: flex;
+  height: 300px;
+  width: 200px;
+  margin-left: 30px;
+  margin-top: 30px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
