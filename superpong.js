@@ -82,8 +82,31 @@ function drawBall() {
     ctx.closePath();
 }
 
+function gameOver(){
+  if(compScore > 9 || humanScore > 9){
+    game = clearTimeout(game);
+
+    let wl = document.getElementById("win-label");
+    wl.style.visibility = "visible";
+      if(compScore > 9 ){
+        wl.innerHTML = "The Computer Won!";
+      } else {
+        wl.innerHTML = "You Won!";
+      }
+
+    let rb = document.getElementById("restart-button");
+    rb.style.visibility = "visible";
+    rb.style.pointerEvents = "all";
+  }
+}
+
+function reloadGame(){
+  document.location.reload();
+}
+
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    gameOver();
     drawBall();
     drawPaddle();
     drawCompPaddle();

@@ -51,6 +51,43 @@ body {
   visibility: hidden;
 }
 
+#win-label{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 275px;
+  margin-left: 175px;
+  width: 100%;
+  height: 30px;
+  width: 90px;
+  border-radius: 5px;
+  border: 1px solid #23fb18;
+  color: #23fb18;
+  background: #black;
+  padding: 2px;
+  visibility: hidden;
+}
+
+
+#restart-button{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 200px;
+  margin-left: 175px;
+  width: 100%;
+  height: 30px;
+  width: 90px;
+  border-radius: 5px;
+  border: 1px solid #23fb18;
+  color: #23fb18;
+  background: #black;
+  padding: 2px;
+  cursor: pointer;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 canvas {
   background: black;
   margin-top: 30px;
