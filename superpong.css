@@ -1,15 +1,32 @@
 * {
+  display: flex;
   padding: 0;
   margin: 0;
   font-family: 'Press Start 2P', cursive;
+  font-size: 12px;
+  color: #23fb18;
+  text-shadow: none;
+}
+
+head {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+
+body {
+  background-image: url("http://res.cloudinary.com/ksavransky/image/upload/v1473811290/pongbk5_ykqlwu.jpg");
   height: 100%;
   width: 100%;
 }
 
-body {
+
+#super-pong{
   display: flex;
-  justify-content: center;
-  background-image: url("http://res.cloudinary.com/ksavransky/image/upload/v1473811290/pongbk5_ykqlwu.jpg");
+  font-size: 22px;
+  margin: 20px;
+  text-shadow: 0px 0px 10px #fff;
 }
 
 #canvas-box{
@@ -98,6 +115,15 @@ canvas {
   height: 100%;
   width: 100%;
   border: 6px solid #23fb18;
+}
+
+#instructions{
+  background: black;
+  height: 175px;
+  width: 375px;
+  border: none;
+  font-size: 10px;
+  resize: none;
 }
 
 #control-box{

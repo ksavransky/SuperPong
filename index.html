@@ -6,11 +6,16 @@
 		<link rel="stylesheet" type="text/css" href="superpong.css">
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
   </head>
+  
   <body>
+
+
+  <div id="super-pong"> SUPER PONG <div>
+
 
   <div id="control-box">
     <div id="difficulty">
-      Computer Smarts
+      Difficulty
       <div class="button" id="easy" onclick="easy()">
         N00b
       </div>
@@ -62,6 +67,23 @@
     </div>
 
   </div>
+
+  <div id="instructions-box">
+    <textarea id="instructions" disabled>Instructions:
+
+Click on START GAME to play.
+
+First player to 10 points wins.
+
+Move your pad (on the bottom) with left and right keyboard buttons.
+
+Pause and unpause the game by pressing "P".
+
+Click on the difficulty and speed options to change game settings.
+
+Enjoy!
+    </textarea>
+  <div>
 
   <script src="superpong.js"></script>
   <script src="controls.js"></script>
