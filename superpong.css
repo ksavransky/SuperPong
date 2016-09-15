@@ -1,13 +1,15 @@
 * {
   padding: 0;
   margin: 0;
-  background-color: grey;
-  /*background-image: url("http://res.cloudinary.com/ksavransky/image/upload/v1473812091/pong10_iiz8pn.jpg");*/
+  font-family: 'Press Start 2P', cursive;
+  height: 100%;
+  width: 100%;
 }
 
 body {
   display: flex;
   justify-content: center;
+  background-image: url("http://res.cloudinary.com/ksavransky/image/upload/v1473811290/pongbk5_ykqlwu.jpg");
 }
 
 #canvas-box{

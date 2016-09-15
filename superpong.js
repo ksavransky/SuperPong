@@ -18,6 +18,31 @@ var ballDYArray = [-3, 3];
 var ballDX;
 var ballDY;
 
+function speed(sp){
+  if (sp == 1){
+    if (ballDY > 0){
+      ballDY = 6;
+    } else {
+      ballDY = -6;
+    }
+    ballDYArray = [-6, 6];
+  } else if (sp == 0){
+    if (ballDY > 0){
+      ballDY = 3;
+    } else {
+      ballDY = -3;
+    }
+    ballDYArray = [-3, 3];
+  } else {
+    ballDYArray = [-2, 2];
+    if (ballDY > 0){
+      ballDY = 2;
+    } else {
+      ballDY = -2;
+    }
+  }
+}
+
 function randomStart(){
   ballX = canvas.width/2;
   ballY = canvas.height/2;

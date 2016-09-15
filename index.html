@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <title> Super Pong! </title>
 		<link rel="stylesheet" type="text/css" href="superpong.css">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
   </head>
   <body>
 
@@ -11,13 +12,25 @@
     <div id="difficulty">
       Computer Smarts
       <div class="button" id="easy" onclick="easy()">
-        Newb
+        N00b
       </div>
       <div class="button" id="normal" onclick="normal()">
-        Semi-Pro
+        Normal
       </div>
       <div class="button" id="hard" onclick="hard()">
         Pro
+      </div>
+    </div>
+    <div id="speed">
+      Ball Speed
+      <div class="button" id="slow" onclick="speed(-1)">
+        Sloth
+      </div>
+      <div class="button" id="medium" onclick="speed(0)">
+        Normal
+      </div>
+      <div class="button" id="fast" onclick="speed(1)">
+        Tachyon
       </div>
     </div>
   </div>
