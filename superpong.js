@@ -6,7 +6,7 @@ var compScore = 0;
 
 var ballX = canvas.width/2;
 var ballY = canvas.height/2;
-var ballDX = 2;
+var ballDX = 0;
 var ballDY = 3;
 var ballRadius = 10;
 
@@ -89,6 +89,8 @@ function draw() {
         }
         else {
         compScore++;
+        let cs = document.getElementById("comp-score");
+        cs.value = compScore;
         ballX = canvas.width/2;
         ballY = canvas.height/2;
         ballDX = 2;
@@ -102,6 +104,8 @@ function draw() {
         }
         else {
         humanScore++;
+        let hs = document.getElementById("human-score");
+        hs.value = humanScore;
         ballX = canvas.width/2;
         ballY = canvas.height/2;
         ballDX = -2;
