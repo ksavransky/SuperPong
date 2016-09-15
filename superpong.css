@@ -10,12 +10,38 @@ body {
   justify-content: center;
 }
 
-canvas {
+#canvas-box{
   display: flex;
+  height: 550px;
+  position: relative;
+  width: 400px;
+}
+
+#new-game{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 275px;
+  margin-left: 160px;
+  width: 100%;
+  height: 30px;
+  width: 90px;
+  border-radius: 5px;
+  border: 1px solid #23fb18;
+  color: #23fb18;
+  background: #black;
+  cursor: pointer;
+  padding: 2px;
+
+}
+
+canvas {
   background: black;
   margin-top: 30px;
   padding-left: 0;
   padding-right: 0;
+  height: 100%;
+  width: 100%;
   border: 6px solid #23fb18;
 }
 
@@ -40,6 +66,10 @@ canvas {
   cursor: pointer;
   padding: 2px;
   margin: 5px;
+}
+
+#new-game{
+  z-index: 2
 }
 
 

@@ -156,6 +156,15 @@ function keyUpHandler(e) {
     }
 }
 
-
-
-setInterval(draw, 10);
+function startNewGame(){
+  let ng = document.getElementById("new-game");
+  ng.style.pointerEvents = "none";
+  ng.style.visibility = "hidden";
+  ballX = canvas.width/2;
+  ballY = canvas.height/2;
+  ballDX = 1;
+  ballDY = 3;
+  humanScore = 0;
+  compScore = 0;
+  setInterval(draw, 10);
+}
