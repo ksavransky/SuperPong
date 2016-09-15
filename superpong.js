@@ -124,7 +124,10 @@ function draw() {
     }
 
     if(ballY < canvas.height*aiHeightMultiplier && ballDY < 0 ){
-      if(ballX + aiLag > compPaddleX + paddleWidth/2 && compPaddleX < canvas.width-paddleWidth){
+      if(ballX > paddleX + paddleWidth/2 - 1 && ballX < paddleX + paddleWidth/2 + 1){
+
+      }
+      else if(ballX + aiLag > compPaddleX + paddleWidth/2 && compPaddleX < canvas.width-paddleWidth){
         compPaddleX += aiSpeed;
       } else if (ballX-paddleWidth - aiLag < compPaddleX && compPaddleX > 0){
         compPaddleX -= aiSpeed;
