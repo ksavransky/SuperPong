@@ -1,7 +1,7 @@
 * {
   padding: 0;
   margin: 0;
-  background-color: green;
+  background-color: grey;
   /*background-image: url("http://res.cloudinary.com/ksavransky/image/upload/v1473812091/pong10_iiz8pn.jpg");*/
 }
 
@@ -16,6 +16,7 @@ canvas {
   margin-top: 30px;
   padding-left: 0;
   padding-right: 0;
+  border: 6px solid #23fb18;
 }
 
 #control-box{
@@ -33,9 +34,9 @@ canvas {
   height: 30px;
   width: 90px;
   border-radius: 5px;
-  border: 1px solid black;
-  color: blue;
-  background: white;
+  border: 1px solid #23fb18;
+  color: #23fb18;
+  background: #black;
   cursor: pointer;
   padding: 2px;
   margin: 5px;
@@ -49,5 +50,6 @@ canvas {
   margin-left: 30px;
   margin-top: 30px;
   border-radius: 5px;
-  border: 1px solid black;
+  border: 1px solid #23fb18;
+  color: #23fb18;
 }

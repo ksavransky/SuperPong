@@ -52,7 +52,7 @@ function drawPaddle() {
 function drawCompPaddle() {
     ctx.beginPath();
     ctx.rect(compPaddleX, 0, paddleWidth, paddleHeight);
-    ctx.fillStyle = "red";
+    ctx.fillStyle = "white";
     ctx.fill();
     ctx.closePath();
 }
