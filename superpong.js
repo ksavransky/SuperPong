@@ -10,9 +10,22 @@ var compScore = 0;
 
 var ballX = canvas.width/2;
 var ballY = canvas.height/2;
-var ballDX = 0;
-var ballDY = 3;
+
 var ballRadius = 10;
+
+var ballDXArray = [1, 2, -1, -2];
+var ballDYArray = [-3, 3];
+var ballDX;
+var ballDY;
+
+function randomStart(){
+  ballX = canvas.width/2;
+  ballY = canvas.height/2;
+  let randDX = Math.floor(Math.random() * ballDXArray.length);
+  ballDX = ballDXArray[randDX];
+  let randDY = Math.floor(Math.random() * ballDYArray.length);
+  ballDY = ballDYArray[randDY];
+}
 
 var paddleHeight = 10;
 var paddleWidth = 75;
@@ -95,10 +108,7 @@ function draw() {
         compScore++;
         let cs = document.getElementById("comp-score");
         cs.value = compScore;
-        ballX = canvas.width/2;
-        ballY = canvas.height/2;
-        ballDX = 2;
-        ballDY = 3;
+        randomStart();
       }
     }
 
@@ -110,10 +120,7 @@ function draw() {
         humanScore++;
         let hs = document.getElementById("human-score");
         hs.value = humanScore;
-        ballX = canvas.width/2;
-        ballY = canvas.height/2;
-        ballDX = -2;
-        ballDY = 3;
+        randomStart();
       }
     }
 
@@ -168,7 +175,6 @@ function pauseGame() {
     game = clearTimeout(game);
     canvas.style.background = "grey";
     document.getElementById("pause-label").style.visibility = "visible";
-
     gamePaused = true;
   } else if (gamePaused) {
     game = setInterval(draw, 10);
@@ -182,10 +188,7 @@ function startNewGame(){
   let ng = document.getElementById("new-game");
   ng.style.pointerEvents = "none";
   ng.style.visibility = "hidden";
-  ballX = canvas.width/2;
-  ballY = canvas.height/2;
-  ballDX = 2;
-  ballDY = -3;
+  randomStart();
   humanScore = 0;
   compScore = 0;
   game = setInterval(draw, 10);
