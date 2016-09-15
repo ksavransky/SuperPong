@@ -128,12 +128,20 @@ canvas {
 
 #control-box{
   display: flex;
+  flex-direction: column;
   height: 300px;
   width: 200px;
   margin-right: 30px;
   margin-top: 30px;
-  border-radius: 5px;
-  border: 1px solid black;
+  border: none;
+}
+
+#difficulty{
+  flex-direction: column;
+}
+
+#speed{
+  flex-direction: column;
 }
 
 .button {
@@ -151,11 +159,16 @@ canvas {
 
 #score-box{
   display: flex;
+  flex-direction: column;
   height: 300px;
   width: 200px;
   margin-left: 30px;
   margin-top: 30px;
-  border-radius: 5px;
-  border: 1px solid #23fb18;
+  border: none;
   color: #23fb18;
+}
+
+.score{
+  background: none;
+  border: none;
 }
