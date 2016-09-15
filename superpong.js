@@ -19,16 +19,26 @@ var compPaddleX = (canvas.width-paddleWidth)/2;
 var rightPressed = false;
 var leftPressed = false;
 
+var aiHeightMultiplier = 0.75;
+var aiLag = 15;
+var aiSpeed = 3;
+
 function easy(){
-  console.log("easy");
+  aiHeightMultiplier = 0.65;
+  aiLag = 20;
+  aiSpeed = 2;
 }
 
 function normal(){
-  console.log("normal");
+  aiHeightMultiplier = 0.8;
+  aiLag = 20;
+  aiSpeed = 4;
 }
 
 function hard(){
-  console.log("hard");
+  aiHeightMultiplier = 1;
+  aiLag = 0;
+  aiSpeed = 6;
 }
 
 function drawPaddle() {
@@ -109,11 +119,11 @@ function draw() {
       paddleX -= 7;
     }
 
-    if(ballY < canvas.height*0.7 && ballDY < 0 ){
-      if(ballX + 20 > compPaddleX + paddleWidth/2 && compPaddleX < canvas.width-paddleWidth){
-        compPaddleX += 2;
-      } else if (ballX-paddleWidth - 20 < compPaddleX && compPaddleX > 0){
-        compPaddleX -= 2;
+    if(ballY < canvas.height*aiHeightMultiplier && ballDY < 0 ){
+      if(ballX + aiLag > compPaddleX + paddleWidth/2 && compPaddleX < canvas.width-paddleWidth){
+        compPaddleX += aiSpeed;
+      } else if (ballX-paddleWidth - aiLag < compPaddleX && compPaddleX > 0){
+        compPaddleX -= aiSpeed;
       }
     }
 }
