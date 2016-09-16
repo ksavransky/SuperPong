@@ -20,6 +20,9 @@ var ballDY;
 
 function speed(sp){
   if (sp == 1){
+    document.getElementById('slow').style.opacity = 0.5;
+    document.getElementById('medium').style.opacity = 0.5;
+    document.getElementById('fast').style.opacity = 1;
     if (ballDY > 0){
       ballDY = 6;
     } else {
@@ -27,6 +30,9 @@ function speed(sp){
     }
     ballDYArray = [-6, 6];
   } else if (sp == 0){
+    document.getElementById('slow').style.opacity = 0.5;
+    document.getElementById('medium').style.opacity = 1;
+    document.getElementById('fast').style.opacity = 0.5;
     if (ballDY > 0){
       ballDY = 3;
     } else {
@@ -34,6 +40,9 @@ function speed(sp){
     }
     ballDYArray = [-3, 3];
   } else {
+    document.getElementById('slow').style.opacity = 1;
+    document.getElementById('medium').style.opacity = 0.5;
+    document.getElementById('fast').style.opacity = 0.5;
     ballDYArray = [-2, 2];
     if (ballDY > 0){
       ballDY = 2;
@@ -69,18 +78,27 @@ function easy(){
   aiHeightMultiplier = 0.65;
   aiLag = 20;
   aiSpeed = 2;
+  document.getElementById('easy').style.opacity = 1;
+  document.getElementById('normal').style.opacity = 0.5;
+  document.getElementById('hard').style.opacity = 0.5;
 }
 
 function normal(){
   aiHeightMultiplier = 0.8;
   aiLag = 20;
   aiSpeed = 4;
+  document.getElementById('easy').style.opacity = 0.5;
+  document.getElementById('normal').style.opacity = 1;
+  document.getElementById('hard').style.opacity = 0.5;
 }
 
 function hard(){
   aiHeightMultiplier = 1;
   aiLag = 0;
   aiSpeed = 6;
+  document.getElementById('easy').style.opacity = 0.5;
+  document.getElementById('normal').style.opacity = 0.5;
+  document.getElementById('hard').style.opacity = 1;
 }
 
 function drawPaddle() {
@@ -116,7 +134,7 @@ function gameOver(){
       if(compScore > 9 ){
         wl.innerHTML = "The Computer Won!";
       } else {
-        wl.innerHTML = "You Won!";
+        wl.innerHTML = "You're the Winner!";
       }
 
     let rb = document.getElementById("restart-button");

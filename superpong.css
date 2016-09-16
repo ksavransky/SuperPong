@@ -41,16 +41,18 @@ body {
   bottom: 0;
   left: 0;
   margin-bottom: 275px;
-  margin-left: 175px;
+  margin-left: 165px;
   width: 100%;
-  height: 30px;
-  width: 90px;
+  height: 20px;
+  width: 73px;
   border-radius: 5px;
-  border: 1px solid #23fb18;
+  border: 3px solid #23fb18;
   color: #23fb18;
+  text-shadow: 0px 0px 10px #fff;
   background: #black;
   cursor: pointer;
-  padding: 2px;
+  padding-left: 15px;
+  padding-top: 7px;
 }
 
 #pause-label{
@@ -62,8 +64,7 @@ body {
   width: 100%;
   height: 30px;
   width: 90px;
-  border-radius: 5px;
-  border: 1px solid #23fb18;
+  border: none;
   color: #23fb18;
   background: #black;
   padding: 2px;
@@ -75,12 +76,11 @@ body {
   bottom: 0;
   left: 0;
   margin-bottom: 275px;
-  margin-left: 175px;
+  margin-left: 120px;
   width: 100%;
   height: 30px;
-  width: 90px;
-  border-radius: 5px;
-  border: 1px solid #23fb18;
+  width: 250px;
+  border: none;
   color: #23fb18;
   background: #black;
   padding: 2px;
@@ -96,12 +96,14 @@ body {
   margin-left: 175px;
   width: 100%;
   height: 30px;
-  width: 90px;
+  width: 70px;
   border-radius: 5px;
   border: 1px solid #23fb18;
   color: #23fb18;
   background: #black;
-  padding: 2px;
+  padding-left: 10px;
+  padding-top: 5px;
+  text-shadow: 0px 0px 10px #fff;
   cursor: pointer;
   visibility: hidden;
   pointer-events: none;
@@ -144,7 +146,7 @@ canvas {
   border-radius: 5px;
   border: 3px solid #23fb18;
   color: #23fb18;
-  background: none;
+  background: black;
   cursor: pointer;
   padding: 2px;
   padding-left: 9px;
@@ -153,6 +155,27 @@ canvas {
   padding-bottom: 9px;
   margin-top: 20px;
 }
+
+#easy{
+ opacity: 0.5;
+}
+#normal{
+ opacity: 1;
+}
+#hard{
+ opacity: 0.5;
+}
+#slow{
+ opacity: 0.5;
+}
+#medium{
+ opacity: 1;
+}
+#fast{
+ opacity: 0.5;
+}
+
+
 
 #score-box{
   display: flex;
