@@ -1,5 +1,7 @@
 # Super Pong
 
+###[Link to Super Pong](http://preacher-wolf-83250.bitballoon.com/)
+
 This project is an implementation of the classic video game Pong, with bonus features.
 
 The game was developed using Javascript, Canvas, and HTML/CSS.
