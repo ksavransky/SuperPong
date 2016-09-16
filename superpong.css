@@ -16,9 +16,10 @@ head {
 
 
 body {
-  background-image: url("http://res.cloudinary.com/ksavransky/image/upload/v1473811290/pongbk5_ykqlwu.jpg");
+  background-image: url("assets/earth.jpg");
   height: 100%;
   width: 100%;
+  overflow: hidden;
 }
 
 
