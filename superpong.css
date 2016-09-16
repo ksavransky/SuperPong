@@ -117,27 +117,20 @@ canvas {
   border: 6px solid #23fb18;
 }
 
-#instructions{
-  background: black;
-  height: 175px;
-  width: 375px;
-  border: none;
-  font-size: 10px;
-  resize: none;
-}
-
 #control-box{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   height: 300px;
   width: 200px;
-  margin-right: 30px;
+  margin-left: 50px;
+  margin-right: 100px;
   margin-top: 30px;
   border: none;
 }
 
 #difficulty{
   flex-direction: column;
+  margin-right: 30px;
 }
 
 #speed{
@@ -146,29 +139,61 @@ canvas {
 
 .button {
   display: flex;
-  height: 30px;
-  width: 90px;
+  height: 19px;
+  width: 100px;
   border-radius: 5px;
-  border: 1px solid #23fb18;
+  border: 3px solid #23fb18;
   color: #23fb18;
-  background: #black;
+  background: none;
   cursor: pointer;
   padding: 2px;
-  margin: 5px;
+  padding-left: 9px;
+  padding-top: 14px;
+  padding-right: 2px;
+  padding-bottom: 9px;
+  margin-top: 20px;
 }
 
 #score-box{
   display: flex;
   flex-direction: column;
   height: 300px;
-  width: 200px;
-  margin-left: 30px;
+  width: 125px;
+  margin-left: 60px;
   margin-top: 30px;
   border: none;
   color: #23fb18;
 }
 
+#scores-label{
+  width: 20px;
+}
+
+#human-score-label{
+  margin-top: 20px;
+  width: 20px;
+}
+
+#comp-score-label{
+  margin-top: 20px;
+  width: 20px;
+}
 .score{
   background: none;
   border: none;
+  width: 40px;
+  margin-left: 2px;
+}
+
+#instructions-box{
+  margin-top: 30px;
+}
+
+#instructions{
+  background: none;
+  height: auto;
+  width: 300px;
+  border: none;
+  font-size: 10px;
+  resize: none;
 }
