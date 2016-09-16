@@ -10,66 +10,68 @@
   <body>
 
 
-  <div id="super-pong"> SUPER PONG <div>
 
-
-  <div id="control-box">
-    <div id="difficulty">
-      DIFFICULTY
-      <div class="button" id="easy" onclick="easy()">
-        N00b
+  <div id="main">
+    <div id="left-side">
+      <div id="super-pong"> SUPER PONG </div>
+      <div id="control-box">
+        <div id="difficulty">
+          DIFFICULTY
+          <div class="button" id="easy" onclick="easy()">
+            N00b
+          </div>
+          <div class="button" id="normal" onclick="normal()">
+            Semi-Pro
+          </div>
+          <div class="button" id="hard" onclick="hard()">
+            Pro
+          </div>
+        </div>
+        <div id="speed">
+          SPEED
+          <div class="button" id="slow" onclick="speed(-1)">
+            Sloth
+          </div>
+          <div class="button" id="medium" onclick="speed(0)">
+            Normal
+          </div>
+          <div class="button" id="fast" onclick="speed(1)">
+            Tachyon
+          </div>
+        </div>
       </div>
-      <div class="button" id="normal" onclick="normal()">
-        Semi-Pro
-      </div>
-      <div class="button" id="hard" onclick="hard()">
-        Pro
-      </div>
-    </div>
-    <div id="speed">
-      SPEED
-      <div class="button" id="slow" onclick="speed(-1)">
-        Sloth
-      </div>
-      <div class="button" id="medium" onclick="speed(0)">
-        Normal
-      </div>
-      <div class="button" id="fast" onclick="speed(1)">
-        Tachyon
-      </div>
-    </div>
-  </div>
-
-  <div id="canvas-box">
-    <div id="new-game" onclick="startNewGame()">
-      START
-    </div>
-    <div id="pause-label">
-      PAUSED
-    </div>
-    <div id="win-label">
-    </div>
-    <div id="restart-button" onclick="reloadGame()">
-      PLAY AGAIN
-    </div>
-    <canvas id="myCanvas" width="400" height="550"></canvas>
-  </div>
-
-  <div id="score-box">
-    <div id="scores-label">SCORE</div>
-    <div id="human-score-label">
-      Human:
-      <input type="text" class="score" id="human-score" value="0"></input>
-    </div>
-    <div id="comp-score-label">
-      Comp:
-      <input type="text" class="score" id="comp-score" value="0"></input>
     </div>
 
-  </div>
+    <div id="canvas-box">
+      <div id="new-game" onclick="startNewGame()">
+        START
+      </div>
+      <div id="pause-label">
+        PAUSED
+      </div>
+      <div id="win-label">
+      </div>
+      <div id="restart-button" onclick="reloadGame()">
+        PLAY AGAIN
+      </div>
+      <canvas id="myCanvas" width="400" height="550"></canvas>
+    </div>
 
-  <div id="instructions-box">
-    <textarea id="instructions" disabled>INSTRUCTIONS:
+    <div id="score-box">
+      <div id="scores-label">SCORE</div>
+      <div id="human-score-label">
+        Human:
+        <input type="text" class="score" id="human-score" value="0"></input>
+      </div>
+      <div id="comp-score-label">
+        Comp:
+        <input type="text" class="score" id="comp-score" value="0"></input>
+      </div>
+
+    </div>
+
+    <div id="instructions-box">
+      <textarea id="instructions" disabled>INSTRUCTIONS:
 
 Click on START to play.
 
@@ -84,8 +86,9 @@ Pause and unpause the game by pressing "P".
 Click on the difficulty and speed options to change game settings.
 
 Enjoy!
-    </textarea>
-  <div>
+      </textarea>
+    </div>
+</div>
 
   <script src="superpong.js"></script>
 

@@ -122,14 +122,19 @@ canvas {
   border: 6px solid #23fb18;
 }
 
+#left-side{
+  flex-direction: column;
+  margin-left: 75px;
+}
+
 #control-box{
   display: flex;
   flex-direction: row;
   height: 300px;
   width: 200px;
   margin-left: 50px;
-  margin-right: 100px;
-  margin-top: 30px;
+  margin-right: 120px;
+  margin-top: 5px;
   border: none;
 }
 
@@ -218,8 +223,9 @@ canvas {
 #instructions{
   background: none;
   height: auto;
-  width: 300px;
+  width: 270px;
   border: none;
   font-size: 10px;
   resize: none;
+  margin-right: 30px;
 }
