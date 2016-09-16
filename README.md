@@ -2,7 +2,7 @@
 
 This project is an implementation of the classic video game Pong, with bonus features.
 
-The game was developed using javascript, Canvas, and HTML/CSS.
+The game was developed using Javascript, Canvas, and HTML/CSS.
 
 ## Features
 
@@ -21,4 +21,4 @@ The game was developed using javascript, Canvas, and HTML/CSS.
 
 ## Views
 
-![Super Pong Game](assets/superpong.jpg)
+![Super Pong Game](assets/superpong.png)
