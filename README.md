@@ -24,3 +24,28 @@ The game was developed using Javascript, Canvas, and HTML/CSS.
 ## Views
 
 ![Super Pong Game](assets/superpong.png)
+
+
+
+####Sample Code Snippet:
+
+######Computer Difficulty Control
+
+```javascript
+
+if(ballY < canvas.height*aiHeightMultiplier &&
+  ballDY < 0 ){
+  if(ballX > paddleX + paddleWidth/2 - 1 &&
+    ballX < paddleX + paddleWidth/2 + 1){
+
+  }
+  else if(ballX + aiLag > compPaddleX + paddleWidth/2 &&
+    compPaddleX < canvas.width-paddleWidth){
+    compPaddleX += aiSpeed;
+  } else if (ballX-paddleWidth - aiLag < compPaddleX &&
+    compPaddleX > 0){
+    compPaddleX -= aiSpeed;
+  }
+}
+
+```
