@@ -52,7 +52,7 @@ body {
   border: 3px solid #23fb18;
   color: #23fb18;
   text-shadow: 0px 0px 10px #fff;
-  background: #black;
+  background: black;
   cursor: pointer;
   padding-left: 15px;
   padding-top: 7px;
@@ -69,7 +69,7 @@ body {
   width: 90px;
   border: none;
   color: #23fb18;
-  background: #black;
+  background: grey;
   padding: 2px;
   visibility: hidden;
 }
@@ -85,7 +85,7 @@ body {
   width: 250px;
   border: none;
   color: #23fb18;
-  background: #black;
+  background: black;
   padding: 2px;
   visibility: hidden;
 }
@@ -103,7 +103,7 @@ body {
   border-radius: 5px;
   border: 1px solid #23fb18;
   color: #23fb18;
-  background: #black;
+  background: black;
   padding-left: 10px;
   padding-top: 5px;
   text-shadow: 0px 0px 10px #fff;
@@ -136,6 +136,7 @@ canvas {
   margin-right: 120px;
   margin-top: 5px;
   border: none;
+
 }
 
 #difficulty{

@@ -17,25 +17,25 @@
       <div id="control-box">
         <div id="difficulty">
           DIFFICULTY
-          <div class="button" id="easy" onclick="easy()">
+          <div class="button" id="easy" onclick={easy()}>
             N00b
           </div>
-          <div class="button" id="normal" onclick="normal()">
+          <div class="button" id="normal" onclick={normal()}>
             Semi-Pro
           </div>
-          <div class="button" id="hard" onclick="hard()">
+          <div class="button" id="hard" onclick={hard()}>
             Pro
           </div>
         </div>
         <div id="speed">
           SPEED
-          <div class="button" id="slow" onclick="speed(-1)">
+          <div class="button" id="slow" onclick={speed(-1)}>
             Sloth
           </div>
-          <div class="button" id="medium" onclick="speed(0)">
+          <div class="button" id="medium" onclick={speed(0)}>
             Normal
           </div>
-          <div class="button" id="fast" onclick="speed(1)">
+          <div class="button" id="fast" onclick={speed(1)}>
             Tachyon
           </div>
         </div>
@@ -43,7 +43,7 @@
     </div>
 
     <div id="canvas-box">
-      <div id="new-game" onclick="startNewGame()">
+      <div id="new-game" onclick={startNewGame()}>
         START
       </div>
       <div id="pause-label">
@@ -51,7 +51,7 @@
       </div>
       <div id="win-label">
       </div>
-      <div id="restart-button" onclick="reloadGame()">
+      <div id="restart-button" onclick={reloadGame()}>
         PLAY AGAIN
       </div>
       <canvas id="myCanvas" width="400" height="550"></canvas>

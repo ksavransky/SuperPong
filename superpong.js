@@ -55,9 +55,11 @@ function speed(sp){
 function randomStart(){
   ballX = canvas.width/2;
   ballY = canvas.height/2;
-  let randDX = Math.floor(Math.random() * ballDXArray.length);
+  var randDX;
+  randDX= Math.floor(Math.random() * ballDXArray.length);
   ballDX = ballDXArray[randDX];
-  let randDY = Math.floor(Math.random() * ballDYArray.length);
+  var randDY;
+  randDY = Math.floor(Math.random() * ballDYArray.length);
   ballDY = ballDYArray[randDY];
 }
 
@@ -129,7 +131,7 @@ function gameOver(){
   if(compScore > 9 || humanScore > 9){
     game = clearTimeout(game);
 
-    let wl = document.getElementById("win-label");
+    var wl = document.getElementById("win-label");
     wl.style.visibility = "visible";
       if(compScore > 9 ){
         wl.innerHTML = "The Computer Won!";
@@ -137,7 +139,7 @@ function gameOver(){
         wl.innerHTML = "You're the Winner!";
       }
 
-    let rb = document.getElementById("restart-button");
+    var rb = document.getElementById("restart-button");
     rb.style.visibility = "visible";
     rb.style.pointerEvents = "all";
   }
@@ -161,7 +163,7 @@ function draw() {
 
     if (ballY + ballDY > canvas.height-ballRadius) {
       if(ballX > paddleX && ballX < paddleX + paddleWidth) {
-        let paddleMovement = 0;
+        var paddleMovement = 0;
         if(rightPressed){
           paddleMovement = 2;
         } else if(leftPressed){
@@ -172,7 +174,7 @@ function draw() {
         }
         else {
         compScore++;
-        let cs = document.getElementById("comp-score");
+        var cs = document.getElementById("comp-score");
         cs.value = compScore;
         randomStart();
       }
@@ -184,7 +186,7 @@ function draw() {
         }
         else {
         humanScore++;
-        let hs = document.getElementById("human-score");
+        var hs = document.getElementById("human-score");
         hs.value = humanScore;
         randomStart();
       }
@@ -251,7 +253,7 @@ function pauseGame() {
 }
 
 function startNewGame(){
-  let ng = document.getElementById("new-game");
+  var ng = document.getElementById("new-game");
   ng.style.pointerEvents = "none";
   ng.style.visibility = "hidden";
   randomStart();
