@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <title> Super Pong! </title>
 		<link rel="stylesheet" type="text/css" href="superpong.css">
-    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet"> -->
   </head>
 
   <body>
@@ -17,25 +17,25 @@
       <div id="control-box">
         <div id="difficulty">
           DIFFICULTY
-          <div class="button" id="easy" onclick={easy()}>
+          <div class="button hvr-grow" id="easy" onclick={easy()}>
             N00b
           </div>
-          <div class="button" id="normal" onclick={normal()}>
+          <div class="button hvr-grow" id="normal" onclick={normal()}>
             Semi-Pro
           </div>
-          <div class="button" id="hard" onclick={hard()}>
+          <div class="button hvr-grow" id="hard" onclick={hard()}>
             Pro
           </div>
         </div>
         <div id="speed">
           SPEED
-          <div class="button" id="slow" onclick={speed(-1)}>
+          <div class="button hvr-grow" id="slow" onclick={speed(-1)}>
             Sloth
           </div>
-          <div class="button" id="medium" onclick={speed(0)}>
+          <div class="button hvr-grow" id="medium" onclick={speed(0)}>
             Normal
           </div>
-          <div class="button" id="fast" onclick={speed(1)}>
+          <div class="button hvr-grow" id="fast" onclick={speed(1)}>
             Tachyon
           </div>
         </div>
@@ -81,7 +81,9 @@ Move your pad (on the bottom) with left and right keyboard buttons.
 
 Spin or slice the ball (speed it up horizontally) by hitting it while your paddle is moving!
 
-Pause and unpause the game by pressing "P".
+Pause and unpause the game by pressing "p".
+
+Mute music and sound effects by pressing "m".
 
 Click on the difficulty and speed options to change game settings.
 

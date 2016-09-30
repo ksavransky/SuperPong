@@ -2,11 +2,14 @@
   display: flex;
   padding: 0;
   margin: 0;
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'PressFont', cursive;
   font-size: 12px;
   color: #23fb18;
   text-shadow: none;
 }
+
+
+@font-face { font-family: PressFont; src: url("./assets/PressStart2P-Regular.ttf"); }
 
 head {
   visibility: hidden;
@@ -222,11 +225,29 @@ canvas {
 }
 
 #instructions{
-  background: none;
-  height: auto;
-  width: 270px;
+  background-color:rgba(0, 0, 0, 0.4);
+  height: 280px;
+  width: 275px;
   border: none;
   font-size: 10px;
   resize: none;
   margin-right: 30px;
+}
+
+/* Grow */
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+    transform: scale(1.1);
 }

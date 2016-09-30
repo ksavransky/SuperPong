@@ -2,7 +2,7 @@
 
 ###[Link to Super Pong](http://preacher-wolf-83250.bitballoon.com/)
 
-This project is an implementation of the classic video game Pong, with bonus features.
+This project is an implementation of the classic video game Pong, with extra features.
 
 The game was developed using Javascript, Canvas, and HTML/CSS.
 
@@ -18,7 +18,9 @@ The game was developed using Javascript, Canvas, and HTML/CSS.
   - [ ] Points are scored when player misses ball with paddle and it flies off the screen.
   - [ ] Ball is served in random direction to one of the players
   - [ ] Setting choices include 3 difficulty levels and 3 speed options.
+  - [ ] Game has thematic retro music and sounds effects.
   - [ ] Pressing "P" pauses the game loop.
+  - [ ] Pressing "M" mutes music and sound.
   - [ ] 10 points wins the game and player can restart the game.
 
 ## Views

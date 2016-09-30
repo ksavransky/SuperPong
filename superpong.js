@@ -189,6 +189,7 @@ function draw() {
         }
         else {
         compScore++;
+        coinSound.play();
         var cs = document.getElementById("comp-score");
         cs.value = compScore;
         randomStart();
@@ -202,6 +203,7 @@ function draw() {
         }
         else {
         humanScore++;
+        coinSound.play();
         var hs = document.getElementById("human-score");
         hs.value = humanScore;
         randomStart();
@@ -242,6 +244,18 @@ function keyDownHandler(e) {
         leftPressed = true;
     } else if (e.keyCode == 80) {
       pauseGame();
+    } else if (e.keyCode == 77) {
+      if (!retroMusic.paused){
+      retroMusic.pause();
+      hitSound.volume = 0;
+      wonSound.volume = 0;
+      lostSound.volume = 0;
+    } else {
+      retroMusic.play();
+      hitSound.volume = 0.1;
+      wonSound.volume = 0.2;
+      lostSound.volume = 0.2;
+      }
     }
 }
 
@@ -282,6 +296,9 @@ function pauseGame() {
 
 function startNewGame(){
   coinSound.play();
+  hitSound.volume = 0.1;
+  wonSound.volume = 0.2;
+  lostSound.volume = 0.2;
   var ng = document.getElementById("new-game");
   ng.style.pointerEvents = "none";
   ng.style.visibility = "hidden";
