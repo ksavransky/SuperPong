@@ -127,6 +127,11 @@ function drawBall() {
     ctx.closePath();
 }
 
+var wonSound = new Audio("./assets/won.wav");
+wonSound.volume = 0.2;
+var lostSound = new Audio("./assets/lost.wav");
+lostSound.volume = 0.2;
+
 function gameOver(){
   if(compScore > 9 || humanScore > 9){
     game = clearTimeout(game);
@@ -135,8 +140,14 @@ function gameOver(){
     wl.style.visibility = "visible";
       if(compScore > 9 ){
         wl.innerHTML = "The Computer Won!";
+        lostSound.play();
+        retroMusic.pause();
+        retroMusic.currentTime = 0;
       } else {
         wl.innerHTML = "You're the Winner!";
+        wonSound.play();
+        retroMusic.pause();
+        retroMusic.currentTime = 0;
       }
 
     var rb = document.getElementById("restart-button");
@@ -149,12 +160,15 @@ function reloadGame(){
   document.location.reload();
 }
 
+var hitSound = new Audio("./assets/ponghit1.wav");
+hitSound.volume = 0.1;
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     gameOver();
     drawBall();
     drawPaddle();
     drawCompPaddle();
+
 
     if(ballX + ballDX > canvas.width-ballRadius
       || ballX + ballDX < ballRadius) {
@@ -169,8 +183,9 @@ function draw() {
         } else if(leftPressed){
           paddleMovement = -2;
         }
-        ballDY = -ballDY;
-        ballDX = ballDX + paddleMovement;
+          hitSound.play();
+          ballDY = -ballDY;
+          ballDX = ballDX + paddleMovement;
         }
         else {
         compScore++;
@@ -182,7 +197,8 @@ function draw() {
 
     if(ballY + ballDY < ballRadius + paddleHeight) {
       if(ballX > compPaddleX && ballX < compPaddleX + paddleWidth) {
-        ballDY = -ballDY;
+          hitSound.play();
+          ballDY = -ballDY;
         }
         else {
         humanScore++;
@@ -238,13 +254,24 @@ function keyUpHandler(e) {
     }
 }
 
+var coinSound = new Audio("./assets/coinstart.wav");
+coinSound.volume = 0.2;
+var retroMusic = new Audio('./assets/Star Commander1.wav');
+retroMusic.volume = 0.2;
+retroMusic.addEventListener('ended', function() {
+    this.currentTime = 0;
+    this.play();
+}, false);
+
 function pauseGame() {
   if (!gamePaused) {
+    retroMusic.pause();
     game = clearTimeout(game);
     canvas.style.background = "grey";
     document.getElementById("pause-label").style.visibility = "visible";
     gamePaused = true;
   } else if (gamePaused) {
+    retroMusic.play();
     game = setInterval(draw, 10);
     canvas.style.background = "black";
     document.getElementById("pause-label").style.visibility = "hidden";
@@ -252,7 +279,9 @@ function pauseGame() {
   }
 }
 
+
 function startNewGame(){
+  coinSound.play();
   var ng = document.getElementById("new-game");
   ng.style.pointerEvents = "none";
   ng.style.visibility = "hidden";
@@ -260,4 +289,5 @@ function startNewGame(){
   humanScore = 0;
   compScore = 0;
   game = setInterval(draw, 10);
+  retroMusic.play();
 }

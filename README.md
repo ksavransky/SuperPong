@@ -25,8 +25,6 @@ The game was developed using Javascript, Canvas, and HTML/CSS.
 
 ![Super Pong Game](assets/superpong.png)
 
-
-
 ####Sample Code Snippet:
 
 ######Computer Difficulty Control
